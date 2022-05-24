@@ -1,4 +1,4 @@
-# Chatroom-App-v2-
+# Chatroom-App-v2
 An upgraded and more secure version of my chatroom application (iChat). Created using Socket.IO, React.js will now be rendering the front, and Node/Express for the back.
 
 Install the necessary project dependencies in Front and Back:
