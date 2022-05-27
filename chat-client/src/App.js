@@ -6,6 +6,8 @@ import MessageInput from './MessageInput';
 import './App.css';
 import { useOktaAuth } from '@okta/okta-react';
 import { useAuth } from './auth';
+import {BiLogInCircle} from 'react-icons/bi';
+import { FiLogIn, FiLogOut } from 'react-icons/fi';
 
 function App() {
   const { oktaAuth, authState } = useOktaAuth();
@@ -25,20 +27,20 @@ const [user, token] = useAuth();
   return (
     <div className="App">
      
-      <div className='opening'>iChat</div>
+      <div className='opening'>iChat.v2</div>
       <header className="app-header">
 { !authState? (
     <div>Loading...</div>
 ) : (user ? (
   
     <div>
-      <div>Signed in as {user.name}</div>
-      <button className='btnout' onClick={logout}>Sign out</button>
+      <div>Hello, {user.name}</div>
+      <button className='btnout' onClick={logout}>Sign out <FiLogOut className='lilogo2' /></button>
     </div>
 ) : (
     <div>
-      <div>Not signed in</div>
-      <button className='btnin' onClick={login}>Sign in</button>
+      <div>Hello, you are anonymous. Please sign in </div> 
+      <button className='btnin'  onClick={login}> Sign in <FiLogIn className='lilogo'/></button>
     </div>
 )
 )}
