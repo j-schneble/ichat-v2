@@ -16,3 +16,5 @@ Open and run Client Folder:
 ```bash
 npm start
 ```
+
+will be deployed with vercel soon
